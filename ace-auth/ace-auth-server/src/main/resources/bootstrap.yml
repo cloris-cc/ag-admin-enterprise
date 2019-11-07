@@ -1,0 +1,22 @@
+#spring:
+#  cloud:
+#    config:
+#        discovery:
+#           service-id: ace-config
+#           enabled: true
+#        label: master  # git 分支
+#        name: auth
+#        profile: dev
+
+spring:
+  application:
+    name: ace-auth
+  # 配置中心
+  cloud:
+    config:
+      fail-fast: true
+      name: auth
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: ace-config

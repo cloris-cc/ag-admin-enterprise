@@ -1,0 +1,25 @@
+#
+
+
+#spring:
+#  cloud:
+#    config:
+#        discovery:
+#           service-id: ace-config
+#           enabled: true
+#        label: master  # git 分支
+#        name: gate
+#        profile: dev
+
+spring:
+  application:
+    name: ace-gate
+  # 配置中心
+  cloud:
+    config:
+      fail-fast: true
+      name: gate
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: ace-config
